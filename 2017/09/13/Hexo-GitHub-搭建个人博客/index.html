@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Hexo + GitHub 搭建个人博客 | 月光中的污点 | 云在青天水在瓶</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="博客搭建">
+    <meta name="description" content="今天刚好把这个博客搭建起来，就顺便写写搭建过程。  依赖条件注册 Github 账号安装 Git安装 Nodejs安装 Hexo 注册 Github 账号GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 git 作为唯一的版本库格式进行托管，故名 GitHub。 登陆 GitHub官网，点击 Sign up 进行注册。过程简单，默认选项，点击绿色按钮即可。 踩坑提醒注册好的 Gi">
+<meta name="keywords" content="博客搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + GitHub 搭建个人博客">
+<meta property="og:url" content="http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/index.html">
+<meta property="og:site_name" content="月光中的污点">
+<meta property="og:description" content="今天刚好把这个博客搭建起来，就顺便写写搭建过程。  依赖条件注册 Github 账号安装 Git安装 Nodejs安装 Hexo 注册 Github 账号GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 git 作为唯一的版本库格式进行托管，故名 GitHub。 登陆 GitHub官网，点击 Sign up 进行注册。过程简单，默认选项，点击绿色按钮即可。 踩坑提醒注册好的 Gi">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211131578-1923013316.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211205219-505118556.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913213308172-449030976.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211424094-538382795.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211447157-1946686950.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211523828-1129680275.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211623391-1709138964.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913215137922-827633481.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913215328703-12574180.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913220301297-1847572694.jpg">
+<meta property="og:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913220559032-657690550.jpg">
+<meta property="og:updated_time" content="2017-09-13T14:30:55.114Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo + GitHub 搭建个人博客">
+<meta name="twitter:description" content="今天刚好把这个博客搭建起来，就顺便写写搭建过程。  依赖条件注册 Github 账号安装 Git安装 Nodejs安装 Hexo 注册 Github 账号GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 git 作为唯一的版本库格式进行托管，故名 GitHub。 登陆 GitHub官网，点击 Sign up 进行注册。过程简单，默认选项，点击绿色按钮即可。 踩坑提醒注册好的 Gi">
+<meta name="twitter:image" content="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211131578-1923013316.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="月光中的污点" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">moonlightL</h5>
+          <a href="mailto:jx8996@163.com" title="jx8996@163.com" class="mail">jx8996@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/moonlightL" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Hexo + GitHub 搭建个人博客</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Hexo + GitHub 搭建个人博客</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-09-13T09:54:14.000Z" itemprop="datePublished" class="page-time">
+  2017-09-13
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/其他/">其他</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#依赖条件"><span class="post-toc-number">1.</span> <span class="post-toc-text">依赖条件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注册-Github-账号"><span class="post-toc-number">2.</span> <span class="post-toc-text">注册 Github 账号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-Git"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装 Git</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#生成-SSH-Key"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">生成 SSH Key</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#提交公钥"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">提交公钥</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试连接"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">测试连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置连接账户信息"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">配置连接账户信息</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-Nodejs"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装 Nodejs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-Hexo"><span class="post-toc-number">5.</span> <span class="post-toc-text">安装 Hexo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改-hexo-配置"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">修改 hexo 配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#生成静态资源文件"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">生成静态资源文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#提交代码"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">提交代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问线上博客"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">访问线上博客</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#发布博客"><span class="post-toc-number">6.</span> <span class="post-toc-text">发布博客</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-hexo-的小技巧"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">关于 hexo 的小技巧</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小结"><span class="post-toc-number">7.</span> <span class="post-toc-text">小结</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Hexo-GitHub-搭建个人博客"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Hexo + GitHub 搭建个人博客</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-09-13 17:54:14" datetime="2017-09-13T09:54:14.000Z"  itemprop="datePublished">2017-09-13</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/其他/">其他</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>今天刚好把这个博客搭建起来，就顺便写写搭建过程。</p>
+</blockquote>
+<h2 id="依赖条件"><a href="#依赖条件" class="headerlink" title="依赖条件"></a>依赖条件</h2><p><strong>注册 Github 账号</strong><br><strong>安装 Git</strong><br><strong>安装 Nodejs</strong><br><strong>安装 Hexo</strong></p>
+<h2 id="注册-Github-账号"><a href="#注册-Github-账号" class="headerlink" title="注册 Github 账号"></a>注册 Github 账号</h2><pre><code>GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 git 作为唯一的版本库格式进行托管，故名 GitHub。
+</code></pre><p>登陆 <a href="https://github.com" target="_blank" rel="external">GitHub官网</a>，点击 Sign up 进行注册。过程简单，默认选项，点击绿色按钮即可。</p>
+<p><strong><em>踩坑提醒</em></strong><br><em>注册好的 GitHub 账号一定要进行邮箱地址的校验操作，否则会影响 GitHub 博客的访问</em></p>
+<p>注册成功后登陆到管理页面，如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211131578-1923013316.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>点击 New repositoty 创建新仓库。如果找不到该页面，点击右上角的 “+” 号也可以新建仓库。</p>
+<p>然后输入仓库名称。仓库名称格式为 [username].github.io。如下图所示：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211205219-505118556.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>点击 Create repository 。此处完成对 GitHub 的操作。</p>
+<h2 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h2><pre><code>Git 是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。
+</code></pre><p>通过 Git，我们可以将本地代码上传到远端的 GitHub 服务器进行代码托管。</p>
+<p>安装过程简单，略过。</p>
+<p>安装完成后，我们需要通过 Git 连接上 GitHub。步骤如下：</p>
+<h3 id="生成-SSH-Key"><a href="#生成-SSH-Key" class="headerlink" title="生成 SSH Key"></a>生成 SSH Key</h3><p>打开 Git Bash，键入 ssh-keygen -t rsa -C “邮箱地址”，不管任何提示，直接回车即可。<br>执行成功后，在 C:/Users/用户名/.ssh/ 目录下会生成2个文件：id_rsa 和 id_rsa.pub。</p>
+<h3 id="提交公钥"><a href="#提交公钥" class="headerlink" title="提交公钥"></a>提交公钥</h3><p>登陆 GitHub 来到管理界面，点击右上角的图标按钮，如下图:<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913213308172-449030976.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>点击 Setttings。来到设置界面，选择 SSH and GPG keys 菜单。如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211424094-538382795.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>我们将 id_rsa.pub 文件中的所有内容复制到文本框中，点击 Add SSH key 完成操作。</p>
+<h3 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h3><p>打开 Git Bash，键入 ssh -T git@github.com ，如果出现 “You’ve successfully authenticated” 字样，说明之前的配置都生效了。</p>
+<h3 id="配置连接账户信息"><a href="#配置连接账户信息" class="headerlink" title="配置连接账户信息"></a>配置连接账户信息</h3><p>为了避免每次连接 GitHub 都需要输入用户名和密码，我们需要给 Git 配置连接 GitHub 的账户信息。</p>
+<p>打开 Git Bash，键入</p>
+<pre><code>git config --global user.name &quot;用户名&quot;  #设置用户名
+
+git config --global user.email &quot;邮箱地址&quot;  #设置邮箱地址(建议用注册github的邮箱)
+</code></pre><h2 id="安装-Nodejs"><a href="#安装-Nodejs" class="headerlink" title="安装 Nodejs"></a>安装 Nodejs</h2><pre><code>简单的说 Nodejs 就是运行 javascript 的容器(环境)
+</code></pre><p>我们安装 Nodejs 主要是为了使用它的 npm 命令。安装过程简单，略过。</p>
+<h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><pre><code>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+</code></pre><p>登陆 <a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo中文官网</a>，我们可以清晰地看到 Hexo的安装过程，如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211447157-1946686950.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>选择任意目录，执行截图中的命令。如下：</p>
+<pre><code>hexo install hexo-cli -g
+
+hexo init blog
+
+cd blog
+
+npm install 
+
+hexo server
+</code></pre><p><strong><em>踩坑提醒</em></strong><br>    <em>在执行最后一条命令后，不知道什么情况，没法访问博客首页。因此修改端口进行启动</em><br>    即 hexo server -p 8080,如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211523828-1129680275.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>本地可以正常访问博客，但是我们的最终目标是将本地代码提交到 GitHub 上进行页面的访问。</p>
+<h3 id="修改-hexo-配置"><a href="#修改-hexo-配置" class="headerlink" title="修改 hexo 配置"></a>修改 hexo 配置</h3><p>打开 blog 目录中的 _config.yml 文件<br>修改 deploy 参数，以便能将代码提交到 GitHub上：</p>
+<pre><code>deploy:
+  type: git
+  repo: git@github.com:darkmoonlight/darkmoonlight.github.io.git
+  branch: master
+</code></pre><p><strong><em>踩坑提醒</em></strong><br>    <em>冒号后边必须有一个空格</em><br>    <em>repo 的值填写 ssh 类型的地址，如果填写 https 类型地址，每次连接 GitHub 都要输入用户名和密码。</em></p>
+<h3 id="生成静态资源文件"><a href="#生成静态资源文件" class="headerlink" title="生成静态资源文件"></a>生成静态资源文件</h3><p>键入 hexo generate</p>
+<p>该命令执行会查找 hexo 的模板文件生成 html 文件。命令执行成功后，会在 blog 目录下生成 public 的文件夹，里边存放着静态资源文件。</p>
+<h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><p>键入 hexo deploy</p>
+<p><strong><em>踩坑提醒</em></strong><br>    <em>在执行 hexo deploy 后,出现 error deployer not found:github 的错误。需要安装 hexo-deployer-git</em><br>    键入 npm install hexo-deployer-git –save 再重新 hexo deploy 即可上传代码。如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913211623391-1709138964.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<h3 id="访问线上博客"><a href="#访问线上博客" class="headerlink" title="访问线上博客"></a>访问线上博客</h3><p>上传代码后，我们查看 GitHub 新建的仓库已经存放了文件，如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913215137922-827633481.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>在浏览器中输入 <a href="https://darkmoonlight.github.io/" target="_blank" rel="external">https://darkmoonlight.github.io/</a> 即可访问我们搭建好的博客，如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913215328703-12574180.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<h2 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h2><p>搭建好博客，其目的还是要写文章，将文章发布到博客中。那我们该如何发布博客呢？</p>
+<p>打开 Git Bash 或 CMD，切换到 blog 目录下，键入 hexo new “first_blog”。</p>
+<p>执行成功后，会在 blog/source/_posts中创建一个名为 first_blog.md 的文件。</p>
+<p>打开 first_blog.md 文件修改其内容如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913220301297-1847572694.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>保存，我们再重新启动 hexo 服务。键入 hexo clean &amp;&amp; hexo server -p 8080,结果如下图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://images2017.cnblogs.com/blog/542859/201709/542859-20170913220559032-657690550.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>刚刚创建的 first_blog.md 文件的内容已经被发表了。</p>
+<h3 id="关于-hexo-的小技巧"><a href="#关于-hexo-的小技巧" class="headerlink" title="关于 hexo 的小技巧"></a>关于 hexo 的小技巧</h3><ul>
+<li><p>我们在敲 hexo 命令时，其实可以简化命令的书写：<br>hexo g 等价于 hexo generate<br>hexo d 等价于 hexo deploy<br>hexo s 等价于 hexo server<br>hexo n 等价于 hexo new</p>
+</li>
+<li><p>发布博文时，由于由于使用的 Markdown 语法，为了能有效而直观的浏览我们编写的内容，我们可以：<br>使用 <a href="http://write.blog.csdn.net/mdeditor" target="_blank" rel="external">CSDN-markdown 在线编辑器</a> ，而且还免费支持图片上传。<br>文章编写完成后可以将内容导出到本地，再复制粘贴到 _posts 文件夹中</p>
+</li>
+</ul>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><strong>搭建博客的步骤虽然多，但是操作不算复杂，而且里边的坑，我基本已经踩过并指明出来，跟着教程一步步执行一定可以成功搭建属于自己的博客！</strong></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-09-13T14:30:55.114Z" itemprop="dateUpdated">2017-09-13 22:30:55</time>
+</span><br>
+
+
+        
+        原创文章，转载请注明： 转载自<a href="http://www.extlight.com"> 月光中的污点</a><br/> 本文链接地址：：<a href="http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/index.html" target="_blank" rel="external">http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/index.html</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.extlight.com">
+            <img src="/img/avatar.jpg" alt="moonlightL">
+            moonlightL
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客搭建/">博客搭建</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/&title=《Hexo + GitHub 搭建个人博客》 — 月光中的污点&pic=http://www.extlight.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/&title=《Hexo + GitHub 搭建个人博客》 — 月光中的污点&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hexo + GitHub 搭建个人博客》 — 月光中的污点&url=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/&via=http://www.extlight.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/09/13/简单介绍/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">简单介绍</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>moonlightL &copy; 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/&title=《Hexo + GitHub 搭建个人博客》 — 月光中的污点&pic=http://www.extlight.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/&title=《Hexo + GitHub 搭建个人博客》 — 月光中的污点&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hexo + GitHub 搭建个人博客》 — 月光中的污点&url=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/&via=http://www.extlight.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.extlight.com/2017/09/13/Hexo-GitHub-搭建个人博客/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
