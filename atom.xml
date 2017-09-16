@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.extlight.com/"/>
-  <updated>2017-09-15T09:15:06.512Z</updated>
+  <updated>2017-09-15T17:00:20.214Z</updated>
   <id>http://www.extlight.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello world</title>
+    <link href="http://www.extlight.com/2017/09/16/hello-world/"/>
+    <id>http://www.extlight.com/2017/09/16/hello-world/</id>
+    <published>2017-09-15T16:59:53.000Z</published>
+    <updated>2017-09-15T17:00:20.214Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h2 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h2><h2 id="世界"><a href="#世界" class="headerlink" title="世界"></a>世界</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;测试&quot;&gt;&lt;a href=&quot;#测试&quot; class=&quot;headerlink&quot; title=&quot;测试&quot;&gt;&lt;/a&gt;测试&lt;/h2&gt;&lt;h2 id=&quot;你好&quot;&gt;&lt;a href=&quot;#你好&quot; class=&quot;headerlink&quot; title=&quot;你好&quot;&gt;&lt;/a&gt;你好&lt;/h2&gt;&lt;h2 id
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>简单介绍</title>
