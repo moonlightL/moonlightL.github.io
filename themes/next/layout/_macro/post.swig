@@ -201,7 +201,8 @@
           {% endif %}
 
           {% if theme.post_wordcount.wordcount or theme.post_wordcount.min2read %}
-            <div class="post-wordcount">
+            <span class="post-meta-divider">|</span>
+            <span class="post-wordcount">
               {% if theme.post_wordcount.wordcount %}
                 {% if not theme.post_wordcount.separated_meta %}
                   <span class="post-meta-divider">|</span>
@@ -232,7 +233,7 @@
                   {{ min2read(post.content) }}
                 </span>
               {% endif %}
-            </div>
+            </span>
           {% endif %}
 
           {% if post.description and (not theme.excerpt_description or not is_index) %}
@@ -314,6 +315,24 @@
     {### END POST BODY ###}
     {#####################}
 
+    <div align="center">
+  {% if not is_index %}
+    <div class="copyright">
+     <ul>
+        <li>
+            <strong>本文作者：</strong> {{config.author}}
+        </li>
+        <li>
+            <strong>本文链接：</strong> <a href="{{ url_for(page.path) }}" title="{{ page.title }}">{{ page.permalink }}</a>
+        </li>
+        <li>
+            <strong>版权声明：</strong> 本博客所有文章除特别声明外均为原创，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请在文章开头明显位置注明原文链接和作者等相关信息，明确指出修改（如有），并通过 E-mail 等方式告知，谢谢合作！
+        </li>
+     </ul>
+    </div>
+  {% endif %}
+</div>
+
     {% if theme.wechat_subscriber.enabled and not is_index %}
       <div>
         {% include 'wechat-subscriber.swig' %}
@@ -336,7 +355,7 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fa fa-tag"></i> {{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}

@@ -54,3 +54,16 @@
 @import "post-copyright" if hexo-config('post_copyright.enable');
 @import "post-widgets" if (hexo-config('facebook_sdk.enable') and hexo-config('facebook_sdk.like_button')) or (hexo-config('vkontakte_api.enable') and hexo-config('vkontakte_api.like')) or hexo-config('rating.enable');
 @import "post-rtl";
+
+.copyright {
+  margin-top:30px;
+}
+.copyright ul{
+  border-left:2px solid red;
+  padding:2px 10px;
+}
+
+.copyright ul li {
+  list-style:none;
+  text-align:left;
+}
