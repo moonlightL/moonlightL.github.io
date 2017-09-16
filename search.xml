@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hello world]]></title>
-    <url>%2F2017%2F09%2F16%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[测试你好世界]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[简单介绍]]></title>
     <url>%2F2017%2F09%2F15%2F%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
     <content type="text"><![CDATA[新博客上线 之前在博客园写博客，但是由于其排版和样式不够友好，因此笔者搭建新博客系统。以后就在这里博客。]]></content>
