@@ -19,6 +19,14 @@
       {{ totalcount(site, '0,0.0a') }}
     </span>
   {% endif %}
+  <span>&nbsp;<i class="fa fa-clock-o"></i>&nbsp;</span>
+  <span id="showDays"></span>
 </div>
-
+<script>
+    var birthDay = new Date(2017,8,15);
+    var now = new Date();
+    var duration = now.getTime() - birthDay.getTime();
+    var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+    document.getElementById('showDays').innerHTML='本站已运行 ' + total + ' 天';
+</script>
 

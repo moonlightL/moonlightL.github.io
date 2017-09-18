@@ -3,6 +3,7 @@ Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
+Allow: /links/
 Allow: /about/
 
 Disallow: /vendors/
@@ -11,5 +12,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
+
 Sitemap: http://www.extlight.com/sitemap.xml
-Sitemap: https://www.extlight.com/sitemap.xml
+Sitemap: http://www.extlight.com/baidusitemap.xml

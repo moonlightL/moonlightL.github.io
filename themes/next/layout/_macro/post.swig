@@ -315,6 +315,12 @@
     {### END POST BODY ###}
     {#####################}
 
+<div>
+  {% if not is_index %}
+    {% include 'post-end-tag.swig' %}
+  {% endif %}
+</div>
+
     <div align="center">
   {% if not is_index %}
     <div class="copyright">
