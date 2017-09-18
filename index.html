@@ -252,6 +252,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -305,6 +315,210 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.extlight.com/2017/09/18/原生-Javascript-编写贪吃蛇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="moonlightL">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="月光中的污点">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/18/原生-Javascript-编写贪吃蛇/" itemprop="url">原生 Javascript 编写贪吃蛇</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T14:45:23+08:00">
+                2017-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/18/原生-Javascript-编写贪吃蛇/" class="leancloud_visitors" data-flag-title="原生 Javascript 编写贪吃蛇">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,507
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长&asymp;</span>
+                
+                <span title="阅读时长">
+                  7分钟
+                </span>
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p><img src="http://ow97db1io.bkt.clouddn.com/snake-1.gif" alt=""> </p>
+<h3 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h3><ul>
+<li>地图：创建一个 800px * 400px 的 div 元素来充当地图；地图可以看作由 40 x 20 个小 div（宽高都为20px） 元素组成。</li>
+<li>食物：创建一个 宽高都为 20px 的 div 充当食物；食物通过 Math.random 分配随机位置。</li>
+<li>蛇：创建一个二维数组充当蛇；二维数组存放蛇节（3个蛇身和1个蛇头），一维数组存放蛇节的位置、颜色和下一个蛇节对象。</li>
+<li>蛇移动：先移动蛇尾，再移动蛇头。当前移动的蛇节位置为下一个蛇节未移动时的位置。</li>
+</ul>
+<h3 id="设计技术点"><a href="#设计技术点" class="headerlink" title="设计技术点"></a>设计技术点</h3><p>DOM操作、面向对象、事件操作和间隔函数setInterval</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/18/原生-Javascript-编写贪吃蛇/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+<div>
+  
+</div>
+
+    <div align="center">
+  
+</div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -429,10 +643,10 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长&asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  7分钟
                 </span>
               
             </span>
@@ -478,6 +692,10 @@
     
     
     
+
+<div>
+  
+</div>
 
     <div align="center">
   
@@ -610,10 +828,10 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长&asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  1分钟
                 </span>
               
             </span>
@@ -653,6 +871,10 @@
     
     
     
+
+<div>
+  
+</div>
 
     <div align="center">
   
@@ -733,7 +955,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -744,7 +966,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -755,7 +977,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -839,8 +1061,16 @@
   <span class="author" itemprop="copyrightHolder">moonlightL</span>
 
   
+  <span>&nbsp;<i class="fa fa-clock-o"></i>&nbsp;</span>
+  <span id="showDays"></span>
 </div>
-
+<script>
+    var birthDay = new Date(2017,8,15);
+    var now = new Date();
+    var duration = now.getTime() - birthDay.getTime();
+    var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+    document.getElementById('showDays').innerHTML='本站已运行 ' + total + ' 天';
+</script>
 
 
         

@@ -270,6 +270,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -445,10 +455,10 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长&asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  7分钟
                 </span>
               
             </span>
@@ -577,6 +587,18 @@
     
     
 
+<div>
+  
+    
+<div>
+    
+        <div style="text-align:center;color: #626262;font-size:14px;">------本文结束<i class="fa fa-paw"></i>感谢阅读------</div>
+    
+</div>
+
+  
+</div>
+
     <div align="center">
   
     <div class="copyright">
@@ -658,6 +680,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/18/原生-Javascript-编写贪吃蛇/" rel="prev" title="原生 Javascript 编写贪吃蛇">
+                原生 Javascript 编写贪吃蛇 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -777,7 +803,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -788,7 +814,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -799,7 +825,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -899,8 +925,16 @@
   <span class="author" itemprop="copyrightHolder">moonlightL</span>
 
   
+  <span>&nbsp;<i class="fa fa-clock-o"></i>&nbsp;</span>
+  <span id="showDays"></span>
 </div>
-
+<script>
+    var birthDay = new Date(2017,8,15);
+    var now = new Date();
+    var duration = now.getTime() - birthDay.getTime();
+    var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+    document.getElementById('showDays').innerHTML='本站已运行 ' + total + ' 天';
+</script>
 
 
         

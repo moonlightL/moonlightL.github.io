@@ -252,6 +252,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -326,10 +336,10 @@
         
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-                目前共计 3 个标签
+                目前共计 4 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/Git/" style="font-size: 12px; color: #ccc">Git</a> <a href="/tags/GitHub/" style="font-size: 12px; color: #ccc">GitHub</a> <a href="/tags/其他/" style="font-size: 12px; color: #ccc">其他</a>
+              <a href="/tags/Git/" style="font-size: 12px; color: #ccc">Git</a> <a href="/tags/GitHub/" style="font-size: 12px; color: #ccc">GitHub</a> <a href="/tags/Javascript/" style="font-size: 12px; color: #ccc">Javascript</a> <a href="/tags/其他/" style="font-size: 12px; color: #ccc">其他</a>
             </div>
           </div>
         
@@ -388,7 +398,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -399,7 +409,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -410,7 +420,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -494,8 +504,16 @@
   <span class="author" itemprop="copyrightHolder">moonlightL</span>
 
   
+  <span>&nbsp;<i class="fa fa-clock-o"></i>&nbsp;</span>
+  <span id="showDays"></span>
 </div>
-
+<script>
+    var birthDay = new Date(2017,8,15);
+    var now = new Date();
+    var duration = now.getTime() - birthDay.getTime();
+    var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+    document.getElementById('showDays').innerHTML='本站已运行 ' + total + ' 天';
+</script>
 
 
         
