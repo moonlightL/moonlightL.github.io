@@ -63,7 +63,6 @@ menu:
   tags: /tags/ || tags
   categories: /categories/ || th
   about: /about/ || user
-  guestbook: /guestbook
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -120,7 +119,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /images/avatar.gif
+avatar: /images/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -351,7 +350,7 @@ youyan_uid: 2144578
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+#livere_uid:
 
 # Baidu Share
 # Available value:
