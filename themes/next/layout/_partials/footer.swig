@@ -28,5 +28,18 @@
     var duration = now.getTime() - birthDay.getTime();
     var total= Math.floor(duration / (1000 * 60 * 60 * 24));
     document.getElementById('showDays').innerHTML='本站已运行 ' + total + ' 天';
+
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
 </script>
 
