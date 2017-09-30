@@ -22,7 +22,7 @@
   <span>&nbsp;<i class="fa fa-clock-o"></i>&nbsp;</span>
   <span id="showDays"></span>
   <span class="post-meta-divider">|</span>
- <span class="put-on-records" ><a href="http://www.miitbeian.gov.cn/" target="_blank">浙ICP备17044933号</a></span>
+
 </div>
 <script>
     var birthDay = new Date(2017,8,15);
