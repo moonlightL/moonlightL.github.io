@@ -331,8 +331,8 @@ disqus:
 # changyan
 changyan:
   enable: true
-  appid: cytf07q63
-  appkey: 718a09c66d2c2fb8388929bd58e6e805
+  appid:
+  appkey:
 
 
 # Valine.
@@ -348,7 +348,7 @@ valine:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-#youyan_uid: 2144578
+#youyan_uid:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -444,8 +444,8 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: GgYqfThv3FHsJzdwVIDUu5fx-gzGzoHsz
-  app_key: fdJC4Utk25tPS3EoysBfffHt
+  app_id:
+  app_key:
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
